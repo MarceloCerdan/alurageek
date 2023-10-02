@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraGeek | Inicio Secion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/inicioSecion.css">
+</head>
+<body>
+    <header>
+        <div class="principal container">
+            <img class="principal__logo-img"src="../assets/img/Logo.png" alt="Logo AluraGeek">
+            <div class="principal__search">
+                <div class="principal__search-search">
+                    <input class="principal__search-search--input" type="text" placeholder="¿Que deceas buscar?">
+                    <img class="principal__search-search--search" src="../assets/img/search.svg" alt="">
+                </div>
+            </div>
+            <a class="principal__registro" href="registro.html">Registrarse</a>
+        </div>
+    </header>
+    <main>
+        <div class="inicioSecion">
+            <h4 class="inicioSecion__titulo">Inciar Secion</h4>
+            <form action="registroCompletado.html" class="inicioSecion__form">
+                <div class="formulario__container formulario__inicioSecion">
+                    <div class="formulario__container-input" data-contenedor>
+                        <input class="formulario__input input" type="email" required autocomplete="on" data-tipo ="email" data-email><span class="barra"></span>
+                        <label class="formulario__label" for="correo">Correo </label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                    <div class="formulario__container-input">
+                        <input class="formulario__input input" name="password" type="password" required autocomplete="on" data-tipo ="password" pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$" data-contra><span class="barra" ></span>
+                        <label class="formulario__label" for="password">Contraseña </label>
+                        <span class="span">Este campo no puede estar vacio</span>
+                    </div>
+                </div>
+                <button class="inicioSecion__form-input" onclick="return enviarFormulario()" >Entrar</button>
+                <!-- <a class="inicioSecion__link" href="registroCompletado.html"></a> -->
+            </form>
+        </div>
+    </main>
+    <footer>
+        <section class="footer">
+            <article class="container hableConNosotros">
+                <div class="hableConNosotros__lista">
+                    <div class="hableConNosotros__lista-img">
+                        <img src="../assets/img/Logo.png" alt="Logo AluraGeek">
+                    </div>
+                    <ul class="hableConNosotros__lista-flex">
+                        <li class="hableConNosotros__lista-items">Quienes somos</li>
+                        <li class="hableConNosotros__lista-items">Politica de privacidad</li>
+                        <li class="hableConNosotros__lista-items">Programa de fidelidad</li>
+                        <li class="hableConNosotros__lista-items">Nuestras tiendas</li>
+                        <li class="hableConNosotros__lista-items">Quiero ser franquiciado</li>
+                        <li class="hableConNosotros__lista-items">Anúncie aquí</li>
+                    </ul>
+                </div>
+                <div class="hableConNosotros__formulario">
+                    <h5>Hable con nosotros</h5>
+                    <form action="registroCompleto.html" data-form>
+                        <div class="formulario__container">
+                            <div class="formulario__container-input">
+                                <input class="formulario__input input" type="text" required autocomplete="on" data-tipo ="nombre" pattern="^[\s\S]{0,50}$"><span class="barra" ></span>
+                                <label class="formulario__label" for="nombre">Nombre </label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                            <div class="formulario__container-input" data-contenedor>
+                                <textarea class="formulario__textarea input" cols="30" rows="4" data-tipo = "mensaje" required pattern="^[\s\S]{0,300}$"></textarea>
+                                <span class="barra"></span>
+                                <label class="formulario__label" for="mensaje">Mensaje</label>
+                                <span class="span">Este campo no puede estar vacio</span>
+                            </div>
+                        </div>
+                        <a href="registroCompleto.html"><button class="formulario__boton" type="submit" data-form-btn >Enviar mensaje</button></a>
+                    </form>
+                </div>
+            </article>
+        </section>
+        <section class="rodapie">
+            <p>&copy Oscar Juarez-2023</p>
+        </section>
+    </footer>
+    <script src="../controllers/script.js"></script>
+    <script src="../controllers/inicioSecion.js"></script>
+</body>
+</html>
